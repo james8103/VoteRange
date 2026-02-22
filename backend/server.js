@@ -90,7 +90,7 @@ async function checkWinCondition(election) {
 			election.winner = candidate;
 			await election.save();
 
-			console.log(`🎉 ${candidate} won! Distributing payouts...`);
+			console.log(`${candidate} won! Distributing payouts...`);
 
 			// Get all users who participated in this election
 			const participants = await UserElection.find({
@@ -145,7 +145,7 @@ app.get("/elections", async (req, res) => {
 	}
 });
 
-// Admin endpoint to get ALL elections (including hidden)
+// Admin endpoint to get all elections
 app.get("/elections/all", async (req, res) => {
 	try {
 		const elections = await Election.find();
@@ -347,7 +347,7 @@ app.post("/stake", async (req, res) => {
 			const announcement = new Message({
 				electionId: objectId,
 				username: "SYSTEM",
-				message: `${winner} has won the election! Payouts distributed. Check your balance!`,
+				message: `${winner} has won the election! Payouts distributed. Check your balance (May need to refresh your page for balance updates)!`,
 			});
 			await announcement.save();
 			io.to(`election:${electionId}`).emit("chat:message", announcement);
@@ -405,7 +405,7 @@ app.post("/resolve", async (req, res) => {
 // Socket.IO handlers
 // ----------------------
 io.on("connection", (socket) => {
-	console.log("🔌 A user connected");
+	console.log("A user connected");
 
 	socket.on("join", async ({ username, electionId }) => {
 		try {
