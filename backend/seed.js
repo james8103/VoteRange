@@ -51,7 +51,7 @@ async function seedDatabase() {
 				voteThreshold: 10,
 				entryBonus: 200,
 				voteCost: 50,
-				isVisible: true,
+				isVisible: false,
 				voteCounts: new Map([
 					["Sports Programs", 0],
 					["Arts & Culture", 0],
@@ -72,7 +72,7 @@ async function seedDatabase() {
 				voteThreshold: 12,
 				entryBonus: 250,
 				voteCost: 60,
-				isVisible: true,
+				isVisible: false,
 				voteCounts: new Map([
 					["Beach Resort", 0],
 					["Mountain Lodge", 0],
@@ -89,7 +89,7 @@ async function seedDatabase() {
 				voteThreshold: 8,
 				entryBonus: 150,
 				voteCost: 40,
-				isVisible: true,
+				isVisible: false,
 				voteCounts: new Map([
 					["Action Thriller", 0],
 					["Romantic Comedy", 0],
@@ -140,7 +140,7 @@ async function seedDatabase() {
 				voteThreshold: 8,
 				entryBonus: 180,
 				voteCost: 45,
-				isVisible: true,
+				isVisible: false,
 				voteCounts: new Map([
 					["Hiking Trip", 0],
 					["Escape Room", 0],
@@ -161,7 +161,7 @@ async function seedDatabase() {
 				voteThreshold: 12,
 				entryBonus: 250,
 				voteCost: 60,
-				isVisible: true,
+				isVisible: false,
 				voteCounts: new Map([
 					["Dark Mode", 0],
 					["Mobile App", 0],
@@ -201,7 +201,7 @@ async function seedDatabase() {
 				voteThreshold: 8,
 				entryBonus: 150,
 				voteCost: 40,
-				isVisible: true,
+				isVisible: false,
 				voteCounts: new Map([
 					["Italian Bistro", 0],
 					["Asian Fusion", 0],
