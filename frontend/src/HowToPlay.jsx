@@ -63,7 +63,7 @@ export default function HowToPlay({ onClose }) {
 			),
 		},
 		{
-			title: "Step 2: Each Candidate is Worth Different Amounts to YOU 📊",
+			title: "Step 2: Each Candidate is Worth Different Amounts to You",
 			content: (
 				<div className="space-y-4">
 					<p className="text-lg">
@@ -212,7 +212,7 @@ export default function HowToPlay({ onClose }) {
 			),
 		},
 		{
-			title: "Quick Example Game 🎮",
+			title: "Quick Example Game",
 			content: (
 				<div className="space-y-4">
 					<p className="text-lg font-semibold mb-3">
@@ -315,33 +315,31 @@ export default function HowToPlay({ onClose }) {
 							<div className="bg-white p-3 rounded shadow-sm">
 								<p className="font-semibold text-green-700">✓ Do This:</p>
 								<ul className="mt-2 space-y-1 text-gray-700">
-									<li>• Check your payouts first</li>
-									<li>• Chat with other players</li>
-									<li>• Form alliances</li>
-									<li>• Vote strategically</li>
-									<li>• Watch vote counts</li>
+									<li>Check your payouts first</li>
+									<li>Chat with other players</li>
+									<li>Form alliances</li>
+									<li>Vote strategically</li>
+									<li>Watch vote counts</li>
 								</ul>
 							</div>
 							<div className="bg-white p-3 rounded shadow-sm">
 								<p className="font-semibold text-red-700">✗ Avoid This:</p>
 								<ul className="mt-2 space-y-1 text-gray-700">
-									<li>• Voting randomly</li>
-									<li>• Spending all coins early</li>
-									<li>• Ignoring other players</li>
-									<li>• Letting balance hit zero</li>
-									<li>• Missing the chat</li>
+									<li>Voting randomly</li>
+									<li>Spending all coins early</li>
+									<li>Ignoring other players</li>
+									<li>Letting balance hit zero</li>
+									<li>Missing the chat</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 
 					<div className="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
-						<p className="font-semibold text-center text-lg mb-2">
-							🎓 Remember:
-						</p>
+						<p className="font-semibold text-center text-lg mb-2">Remember:</p>
 						<p className="text-center text-gray-700">
-							This is a <strong>game theory experiment</strong>! There's no
-							"perfect" strategy - it depends on what other players do.
+							This is a <strong>game theory experiment</strong> so here's no
+							"perfect" strategy, it depends on what other players do.
 							Negotiate, strategize, and have fun!
 						</p>
 					</div>
