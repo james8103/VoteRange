@@ -12,15 +12,9 @@ export default function Home({ onJoin }) {
 				placeholder="Enter your name"
 				value={name}
 				onChange={(e) => setName(e.target.value)}
-				className="border rounded px-3 py-2"
 			/>
 
-			<button
-				onClick={() => name && onJoin(name)}
-				className="bg-green-600 text-white px-4 py-2 rounded"
-			>
-				Join
-			</button>
+			<button onClick={() => name && onJoin(name)}>Join</button>
 		</div>
 	);
 }
