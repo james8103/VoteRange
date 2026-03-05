@@ -225,6 +225,11 @@ export default function ElectionRoom({ username, election, onExit }) {
 			</button>
 			<h1 className="text-2xl font-bold mb-2">{election.title}</h1>
 
+			<div className="text-right">
+				<p className="text-sm text-gray-600">Your Balance</p>
+				<p className="text-3xl font-bold">{balances[username] || 0} coins</p>
+			</div>
+
 			{winner && (
 				<div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
 					<strong>Winner: {winner}!</strong>
@@ -299,94 +304,74 @@ export default function ElectionRoom({ username, election, onExit }) {
 						</p>
 					</div>
 
-					{/* Your Balance */}
-					<div className="mb-4 p-3 bg-gray-50 rounded">
-						<p className="text-sm font-semibold">Your Balance:</p>
-						<p className="text-2xl font-bold">
-							{balances[username] || 0} coins
-						</p>
-					</div>
-
 					<h3 className="font-semibold mb-2">Candidates:</h3>
-					<ul>
-						{election.candidates.map((c) => {
-							const votes = voteCounts[c] || 0;
-							const progress = getWinProgress(c);
-							const myPayout = userPayouts[c];
+					{election.candidates.map((c) => {
+						const votes = voteCounts[c] || 0;
+						const progress = getWinProgress(c);
+						const myPayout = userPayouts[c];
 
-							return (
-								<li key={c} className="mb-4 p-3 border rounded">
-									<div className="mb-2">
-										<div className="flex justify-between items-center">
-											<strong>{c}</strong>
-											<span className="text-sm text-gray-600">
-												{votes}/{voteThreshold} votes
+						return (
+							<div>
+								<div className="mb-2">
+									<div className="flex justify-between items-center">
+										<strong>{c}</strong>
+										<span className="text-sm text-gray-600">
+											{votes}/{voteThreshold} votes
+										</span>
+									</div>
+
+									{/* Show personalized payout */}
+									{myPayout !== undefined && (
+										<div className="mt-1">
+											<span className="text-xs text-gray-500">
+												If {c} wins:{" "}
+											</span>
+											<span
+												className={`text-sm font-semibold ${getPayoutColor(myPayout)}`}
+											>
+												{myPayout > 0 ? "+" : ""}
+												{myPayout} coins
 											</span>
 										</div>
+									)}
+								</div>
 
-										{/* Show personalized payout */}
-										{myPayout !== undefined && (
-											<div className="mt-1">
-												<span className="text-xs text-gray-500">
-													If {c} wins:{" "}
-												</span>
-												<span
-													className={`text-sm font-semibold ${getPayoutColor(myPayout)}`}
-												>
-													{myPayout > 0 ? "+" : ""}
-													{myPayout} coins
-												</span>
-											</div>
-										)}
-									</div>
-
-									{/* Progress bar */}
-									<div className="w-full bg-gray-200 rounded-full h-2.5 mb-2">
-										<div
-											className="bg-blue-600 h-2.5 rounded-full transition-all duration-300"
-											style={{ width: `${progress}%` }}
-										></div>
-									</div>
-
-									<button
-										onClick={() => handleVote(c)}
-										disabled={
-											winner !== null ||
-											votingInProgress ||
-											(balances[username] || 0) < voteCost
-										}
-										className={`w-full px-3 py-1 rounded text-sm ${
-											winner
-												? "bg-gray-300 cursor-not-allowed text-gray-600"
-												: (balances[username] || 0) < voteCost
-													? "bg-red-200 cursor-not-allowed text-red-800"
-													: votingInProgress
-														? "bg-gray-300 cursor-not-allowed"
-														: "bg-green-500 text-white hover:bg-green-600"
-										}`}
-									>
-										{winner
-											? "Election Ended"
+								<button
+									onClick={() => handleVote(c)}
+									disabled={
+										winner !== null ||
+										votingInProgress ||
+										(balances[username] || 0) < voteCost
+									}
+									className={`w-full px-3 py-1 rounded text-sm ${
+										winner
+											? "bg-gray-300 cursor-not-allowed text-gray-600"
 											: (balances[username] || 0) < voteCost
-												? "Insufficient Balance"
+												? "bg-red-200 cursor-not-allowed text-red-800"
 												: votingInProgress
-													? "Voting..."
-													: `Vote for ${c}`}
-									</button>
-								</li>
-							);
-						})}
-					</ul>
+													? "bg-gray-300 cursor-not-allowed"
+													: "bg-green-500 text-white hover:bg-green-600"
+									}`}
+								>
+									{winner
+										? "Election Ended"
+										: (balances[username] || 0) < voteCost
+											? "Insufficient Balance"
+											: votingInProgress
+												? "Voting..."
+												: `Vote for ${c}`}
+								</button>
+							</div>
+						);
+					})}
 
 					<h3 className="font-semibold mt-4 mb-2">All Balances:</h3>
-					<ul className="space-y-1 text-sm">
-						{Object.entries(balances).map(([u, b]) => (
-							<li key={u} className="flex justify-between">
-								<span className={u === username ? "font-bold" : ""}>{u}:</span>
-								<strong className={b < 0 ? "text-red-600" : ""}>{b}</strong>
-							</li>
-						))}
-					</ul>
+					{Object.entries(balances).map(([u, b]) => (
+						<div key={u} className="flex justify-between">
+							<span className={u === username ? "font-bold" : ""}>{u}:</span>
+							<strong className={b < 0 ? "text-red-600" : ""}>{b}</strong>
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
