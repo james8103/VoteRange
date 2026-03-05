@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ElectionRoom from "./ElectionRoom";
 import HowToPlay from "./HowToPlay";
+import "./App.css";
 
 export default function App() {
 	const [username, setUsername] = useState(() => {
@@ -181,6 +182,15 @@ export default function App() {
 											</p>
 										</div>
 									)}
+									<button
+										onClick={() => setSelectedElection(election)}
+										className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all shadow-md"
+										disabled={election.status !== "open"}
+									>
+										{election.status === "open"
+											? "Join Election"
+											: "Election Closed"}
+									</button>
 								</div>
 							))}
 						</div>
