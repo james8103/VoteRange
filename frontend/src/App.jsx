@@ -1,6 +1,16 @@
+import React, { useEffect, useState } from "react";
+import ElectionRoom from "./ElectionRoom";
+import HowToPlay from "./HowToPlay";
+
 export default function App() {
-	const [username, setUsername] = useState("");
-	const [loggedIn, setLoggedIn] = useState(false);
+	const [username, setUsername] = useState(() => {
+		return localStorage.getItem("username") || "";
+	});
+
+	const [loggedIn, setLoggedIn] = useState(() => {
+		return localStorage.getItem("username") ? true : false;
+	});
+
 	const [elections, setElections] = useState([]);
 	const [selectedElection, setSelectedElection] = useState(null);
 	const [showHowToPlay, setShowHowToPlay] = useState(false);
@@ -14,11 +24,11 @@ export default function App() {
 
 	const handleLogin = () => {
 		if (username.trim()) {
+			localStorage.setItem("username", username);
 			setLoggedIn(true);
 		}
 	};
 
-	// RENDER HowToPlay OUTSIDE all conditionals
 	if (showHowToPlay) {
 		return <HowToPlay onClose={() => setShowHowToPlay(false)} />;
 	}
