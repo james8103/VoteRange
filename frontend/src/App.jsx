@@ -1,7 +1,3 @@
-import React, { useEffect, useState } from "react";
-import ElectionRoom from "./ElectionRoom";
-import HowToPlay from "./HowToPlay";
-
 export default function App() {
 	const [username, setUsername] = useState("");
 	const [loggedIn, setLoggedIn] = useState(false);
@@ -21,6 +17,11 @@ export default function App() {
 			setLoggedIn(true);
 		}
 	};
+
+	// RENDER HowToPlay OUTSIDE all conditionals
+	if (showHowToPlay) {
+		return <HowToPlay onClose={() => setShowHowToPlay(false)} />;
+	}
 
 	if (!loggedIn) {
 		return (
@@ -59,8 +60,6 @@ export default function App() {
 						<p>New to VoteRange? Click "How to Play" to learn the rules!</p>
 					</div>
 				</div>
-
-				{showHowToPlay && <HowToPlay onClose={() => setShowHowToPlay(false)} />}
 			</div>
 		);
 	}
@@ -178,8 +177,6 @@ export default function App() {
 					)}
 				</div>
 			</div>
-
-			{showHowToPlay && <HowToPlay onClose={() => setShowHowToPlay(false)} />}
 		</div>
 	);
 }
