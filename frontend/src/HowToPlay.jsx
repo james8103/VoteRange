@@ -21,6 +21,10 @@ export default function HowToPlay({ onClose }) {
 							Vote strategically to maximize your coins by getting your
 							preferred candidate to win!
 						</p>
+						<p>
+							<strong>Note:</strong> you must cast at least one vote to be
+							eligible for payouts when the election ends.
+						</p>
 					</div>
 				</div>
 			),
