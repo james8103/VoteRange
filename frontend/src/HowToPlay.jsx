@@ -14,7 +14,9 @@ export default function HowToPlay({ onClose }) {
 						<strong> everyone has different goals!</strong>
 					</p>
 					<div>
-						<p><strong>The Goal:</strong></p>
+						<p>
+							<strong>The Goal:</strong>
+						</p>
 						<p>
 							Vote strategically to maximize your coins by getting your
 							preferred candidate to win!
@@ -32,16 +34,24 @@ export default function HowToPlay({ onClose }) {
 						(only once per election).
 					</p>
 					<div>
-						<p><strong>What can you do with coins?</strong></p>
+						<p>
+							<strong>What can you do with coins?</strong>
+						</p>
 						<ul>
-							<li><strong>Vote:</strong> Each vote costs 50 coins</li>
-							<li><strong>Vote multiple times:</strong> You can vote as many times as you can afford</li>
-							<li><strong>Vote for different candidates:</strong> Change your mind anytime</li>
+							<li>
+								<strong>Vote:</strong> Each vote costs 50 coins
+							</li>
+							<li>
+								<strong>Vote multiple times:</strong> You can vote as many times
+								as you can afford
+							</li>
+							<li>
+								<strong>Vote for different candidates:</strong> Change your mind
+								anytime
+							</li>
 						</ul>
 					</div>
-					<p>
-						With 200 coins, you can vote up to 4 times (200 ÷ 50 = 4 votes)
-					</p>
+					<p>With 200 coins, you can vote up to 4 times (200 ÷ 50 = 4 votes)</p>
 				</div>
 			),
 		},
@@ -54,24 +64,34 @@ export default function HowToPlay({ onClose }) {
 						<strong> You have personalized payouts</strong> for each candidate.
 					</p>
 					<div>
-						<p><strong>Example: Your Personal Payouts</strong></p>
+						<p>
+							<strong>Example: Your Personal Payouts</strong>
+						</p>
 						<div>
 							<div>
-								<span><strong>Candidate A wins:</strong></span>
+								<span>
+									<strong>Candidate A wins:</strong>
+								</span>
 								<span> +150 coins</span>
 							</div>
 							<div>
-								<span><strong>Candidate B wins:</strong></span>
+								<span>
+									<strong>Candidate B wins:</strong>
+								</span>
 								<span> +60 coins</span>
 							</div>
 							<div>
-								<span><strong>Candidate C wins:</strong></span>
+								<span>
+									<strong>Candidate C wins:</strong>
+								</span>
 								<span> -30 coins</span>
 							</div>
 						</div>
 					</div>
 					<div>
-						<p><strong>The Twist:</strong></p>
+						<p>
+							<strong>The Twist:</strong>
+						</p>
 						<p>
 							<strong>Other players have DIFFERENT payouts!</strong> What's good
 							for you might be bad for them.
@@ -93,17 +113,19 @@ export default function HowToPlay({ onClose }) {
 						<strong> any candidate reaches the vote threshold</strong>.
 					</p>
 					<div>
-						<p><strong>Election Progress:</strong></p>
+						<p>
+							<strong>Election Progress:</strong>
+						</p>
 						<div>
 							<p>Candidate A - 7/10 votes</p>
 							<p>Candidate B - 4/10 votes</p>
 						</div>
 					</div>
 					<div>
-						<p><strong>When Election Ends:</strong></p>
 						<p>
-							Everyone gets their payout based on who won.
+							<strong>When Election Ends:</strong>
 						</p>
+						<p>Everyone gets their payout based on who won.</p>
 					</div>
 				</div>
 			),
@@ -116,17 +138,31 @@ export default function HowToPlay({ onClose }) {
 						Use the <strong>chat</strong> to negotiate with other players!
 					</p>
 					<div>
-						<p><strong>Strategic Options:</strong></p>
+						<p>
+							<strong>Strategic Options:</strong>
+						</p>
 						<ul>
-							<li><strong>Vote for your favorite</strong></li>
-							<li><strong>Form coalitions</strong></li>
-							<li><strong>Block bad outcomes</strong></li>
-							<li><strong>Compromise</strong></li>
+							<li>
+								<strong>Vote for your favorite</strong>
+							</li>
+							<li>
+								<strong>Form coalitions</strong>
+							</li>
+							<li>
+								<strong>Block bad outcomes</strong>
+							</li>
+							<li>
+								<strong>Compromise</strong>
+							</li>
 						</ul>
 					</div>
 					<div>
-						<p><strong>Watch Out:</strong></p>
-						<p>If you run out of coins (balance ≤ 0), you can't vote anymore.</p>
+						<p>
+							<strong>Watch Out:</strong>
+						</p>
+						<p>
+							If you run out of coins (balance ≤ 0), you can't vote anymore.
+						</p>
 					</div>
 				</div>
 			),
@@ -135,19 +171,37 @@ export default function HowToPlay({ onClose }) {
 			title: "Quick Example Game",
 			content: (
 				<div>
-					<p><strong>4 Players, 3 Candidates - Who Will Win?</strong></p>
+					<p>
+						<strong>4 Players, 3 Candidates - Who Will Win?</strong>
+					</p>
 					<div>
-						<p><strong>Alice's Payouts:</strong> A:+150 | B:+60 | C:-30</p>
-						<p><strong>Bob's Payouts:</strong> A:-30 | B:+150 | C:+20</p>
-						<p><strong>Carol's Payouts:</strong> A:+20 | B:-70 | C:+150</p>
-						<p><strong>Dave's Payouts:</strong> A:+150 | B:+20 | C:+60</p>
+						<p>
+							<strong>Alice's Payouts:</strong> A:+150 | B:+60 | C:-30
+						</p>
+						<p>
+							<strong>Bob's Payouts:</strong> A:-30 | B:+150 | C:+20
+						</p>
+						<p>
+							<strong>Carol's Payouts:</strong> A:+20 | B:-70 | C:+150
+						</p>
+						<p>
+							<strong>Dave's Payouts:</strong> A:+150 | B:+20 | C:+60
+						</p>
 					</div>
 					<div>
-						<p><strong>Possible Outcomes:</strong></p>
+						<p>
+							<strong>Possible Outcomes:</strong>
+						</p>
 						<ul>
-							<li><strong>A wins:</strong> Alice & Dave happy</li>
-							<li><strong>B wins:</strong> Bob happy</li>
-							<li><strong>C wins:</strong> Carol wins big</li>
+							<li>
+								<strong>A wins:</strong> Alice & Dave happy
+							</li>
+							<li>
+								<strong>B wins:</strong> Bob happy
+							</li>
+							<li>
+								<strong>C wins:</strong> Carol wins big
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -157,16 +211,16 @@ export default function HowToPlay({ onClose }) {
 			title: "Ready to Play?",
 			content: (
 				<div>
-					<p><strong>Quick Reference:</strong></p>
+					<p>
+						<strong>Quick Reference:</strong>
+					</p>
 					<ul>
 						<li>Check your payouts first</li>
 						<li>Chat with other players</li>
 						<li>Vote strategically</li>
 					</ul>
 					<div>
-						<button onClick={onClose}>
-							Got it! Let's Play!
-						</button>
+						<button onClick={onClose}>Got it! Let's Play!</button>
 					</div>
 				</div>
 			),
@@ -202,7 +256,12 @@ export default function HowToPlay({ onClose }) {
 						<button
 							key={index}
 							onClick={() => goToStep(index)}
-						/>
+							style={{
+								backgroundColor: index === currentStep ? "#8c99a8" : "#616b77",
+							}}
+						>
+							{index + 1}
+						</button>
 					))}
 				</div>
 
@@ -210,15 +269,10 @@ export default function HowToPlay({ onClose }) {
 					Step {currentStep + 1} of {steps.length}
 				</p>
 
-				<div>
-					{steps[currentStep].content}
-				</div>
+				<div>{steps[currentStep].content}</div>
 
 				<div>
-					<button
-						onClick={prevStep}
-						disabled={currentStep === 0}
-					>
+					<button onClick={prevStep} disabled={currentStep === 0}>
 						← Previous
 					</button>
 
