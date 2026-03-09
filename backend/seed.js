@@ -43,7 +43,7 @@ async function seedDatabase() {
 		console.log("Creating elections...");
 		const elections = await Election.insertMany([
 			{
-				title: "University Budget Allocation",
+				title: "(test)University Budget Allocation",
 				description:
 					"Decide where the student activity fund should be allocated for next semester.",
 				candidates: ["Sports Programs", "Arts & Culture", "Technology Labs"],
@@ -51,7 +51,7 @@ async function seedDatabase() {
 				voteThreshold: 10,
 				entryBonus: 200,
 				voteCost: 50,
-				isVisible: false,
+				isVisible: true,
 				voteCounts: new Map([
 					["Sports Programs", 0],
 					["Arts & Culture", 0],
@@ -59,7 +59,7 @@ async function seedDatabase() {
 				]),
 			},
 			{
-				title: "Company Retreat Location",
+				title: "(test)Company Retreat Location",
 				description:
 					"Vote on where our annual company retreat should be held this year.",
 				candidates: [
@@ -72,7 +72,7 @@ async function seedDatabase() {
 				voteThreshold: 12,
 				entryBonus: 250,
 				voteCost: 60,
-				isVisible: false,
+				isVisible: true,
 				voteCounts: new Map([
 					["Beach Resort", 0],
 					["Mountain Lodge", 0],
@@ -81,7 +81,7 @@ async function seedDatabase() {
 				]),
 			},
 			{
-				title: "Next Movie Night Selection",
+				title: "(test)Next Movie Night Selection",
 				description:
 					"Choose which movie we'll watch at the community movie night.",
 				candidates: ["Action Thriller", "Romantic Comedy", "Sci-Fi"],
@@ -89,7 +89,7 @@ async function seedDatabase() {
 				voteThreshold: 8,
 				entryBonus: 150,
 				voteCost: 40,
-				isVisible: false,
+				isVisible: true,
 				voteCounts: new Map([
 					["Action Thriller", 0],
 					["Romantic Comedy", 0],
