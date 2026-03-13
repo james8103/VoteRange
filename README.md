@@ -1,8 +1,11 @@
 # VoteRange: a Strategic Voting Simulation System
 
 **Author:** James Lavin
+
 **Institution:** Maynooth University
+
 **Degree:** BSc Computer Science & Applied Mathematics
+
 **Academic Year:** 2025-2026
 
 ---
@@ -24,8 +27,8 @@ VoteRange is a full-stack web application implementing a real-time, credit-based
 
 - **Node.js** v20.19.0 or later [https://nodejs.org](https://nodejs.org)
 - **npm** v8.0.0 or later (included with Node.js)
-- **Git** — [https://git-scm.com](https://git-scm.com)
-- A **MongoDB Atlas** account with an active cluster — [https://cloud.mongodb.com](https://cloud.mongodb.com)
+- **Git:** [https://git-scm.com](https://git-scm.com)
+- A **MongoDB Atlas** account with an active cluster: [https://cloud.mongodb.com](https://cloud.mongodb.com)
 
 ---
 
@@ -78,7 +81,7 @@ MongoDB connected
 Server running on http://localhost:3001
 ```
 
-**Terminal 2 — Frontend:**
+**Terminal 2: Frontend:**
 
 ```bash
 cd frontend
