@@ -30,7 +30,7 @@ export default function HowToPlay({ onClose }) {
 			),
 		},
 		{
-			title: "Step 1: You Start With Coins",
+			title: "You Start With Coins",
 			content: (
 				<div>
 					<p>
@@ -41,26 +41,24 @@ export default function HowToPlay({ onClose }) {
 						<p>
 							<strong>What can you do with coins?</strong>
 						</p>
-						<ul>
-							<li>
-								<strong>Vote:</strong> Each vote costs 50 coins
-							</li>
-							<li>
-								<strong>Vote multiple times:</strong> You can vote as many times
-								as you can afford
-							</li>
-							<li>
-								<strong>Vote for different candidates:</strong> Change your mind
-								anytime
-							</li>
-						</ul>
+						<div>
+							<strong>Vote:</strong> Each vote costs 50 coins
+						</div>
+						<div>
+							<strong>Vote multiple times:</strong> You can vote as many times
+							as you can afford
+						</div>
+						<div>
+							<strong>Vote for different candidates:</strong> Change your mind
+							anytime
+						</div>
 					</div>
 					<p>With 200 coins, you can vote up to 4 times (200 ÷ 50 = 4 votes)</p>
 				</div>
 			),
 		},
 		{
-			title: "Step 2: Each Candidate is Worth Different Amounts to You",
+			title: "Each Candidate is Worth Different Amounts to You",
 			content: (
 				<div>
 					<p>
@@ -109,7 +107,7 @@ export default function HowToPlay({ onClose }) {
 			),
 		},
 		{
-			title: "Step 3: How to Win the Election",
+			title: "How to Win the Election",
 			content: (
 				<div>
 					<p>
@@ -135,7 +133,7 @@ export default function HowToPlay({ onClose }) {
 			),
 		},
 		{
-			title: "Step 4: Strategy & Negotiation",
+			title: "Strategy & Negotiation",
 			content: (
 				<div>
 					<p>
@@ -146,18 +144,18 @@ export default function HowToPlay({ onClose }) {
 							<strong>Strategic Options:</strong>
 						</p>
 						<ul>
-							<li>
+							<div>
 								<strong>Vote for your favorite</strong>
-							</li>
-							<li>
+							</div>
+							<div>
 								<strong>Form coalitions</strong>
-							</li>
-							<li>
+							</div>
+							<div>
 								<strong>Block bad outcomes</strong>
-							</li>
-							<li>
+							</div>
+							<div>
 								<strong>Compromise</strong>
-							</li>
+							</div>
 						</ul>
 					</div>
 					<div>
@@ -197,15 +195,15 @@ export default function HowToPlay({ onClose }) {
 							<strong>Possible Outcomes:</strong>
 						</p>
 						<ul>
-							<li>
+							<div>
 								<strong>A wins:</strong> Alice & Dave happy
-							</li>
-							<li>
+							</div>
+							<div>
 								<strong>B wins:</strong> Bob happy
-							</li>
-							<li>
+							</div>
+							<div>
 								<strong>C wins:</strong> Carol wins big
-							</li>
+							</div>
 						</ul>
 					</div>
 				</div>
@@ -219,13 +217,10 @@ export default function HowToPlay({ onClose }) {
 						<strong>Quick Reference:</strong>
 					</p>
 					<ul>
-						<li>Check your payouts first</li>
-						<li>Chat with other players</li>
-						<li>Vote strategically</li>
+						<div>Check your payouts first</div>
+						<div>Chat with other players</div>
+						<div>Vote strategically</div>
 					</ul>
-					<div>
-						<button onClick={onClose}>Got it! Let's Play!</button>
-					</div>
 				</div>
 			),
 		},
